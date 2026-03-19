@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-import sqlite3
 
 class PersonManager(ABC):
     def __init__(self, db_name="london_roots.db"):
@@ -7,15 +6,15 @@ class PersonManager(ABC):
 
     @abstractmethod
     def insert_person(self, data_tuple):
-        """Should execute an INSERT INTO query for the specific table"""
+        """Must be implemented by subclasses to insert into specific tables"""
         pass
 
     @abstractmethod
     def remove_person(self, person_id):
-        """Should execute a DELETE FROM query based on ID"""
+        """Must be implemented by subclasses to delete from specific tables"""
         pass
 
     @abstractmethod
     def display_all(self):
-        """Should execute a SELECT * query and return/print results"""
+        """Must be implemented by subclasses to show all records"""
         pass
