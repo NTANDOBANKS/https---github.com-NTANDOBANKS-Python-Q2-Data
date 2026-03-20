@@ -3,7 +3,7 @@ from BillingAddress import CustomerManager
 from Store import Store
 
 def main():
-    # Initialize our management classes
+  
     emp_sys = EmployeeManager()
     cust_sys = CustomerManager()
     store_sys = Store()
